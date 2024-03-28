@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 const dotenv = require('dotenv');
+const router = express.router(); 
 
 // Load environment variables from .env file
 dotenv.config();
@@ -29,6 +30,8 @@ const userDataSchema = new mongoose.Schema({
 
 // Create the UserData model based on the schema
 const UserData = mongoose.model('UserData', userDataSchema);
+
+app.use('/.netlify/functions/api', router);
 
 // Routes
 app.post('/login_success', (request, response) => {
