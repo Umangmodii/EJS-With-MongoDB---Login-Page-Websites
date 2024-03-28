@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_module/.bin/netlify-lambda server views",
-    "build": "./node_module/.bin/netlify-lambda server views"
+    "start": "nodemon index.js" 
   },
   "keywords": [],
   "author": "",
